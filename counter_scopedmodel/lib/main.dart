@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:todo_scopedmodel/Model/counter_model.dart';
+import 'package:counter_scopedmodel/Model/counter_model.dart';
 
 //此时，我们需要把 CounterModel 放入顶层Widget中，这样所有的子组件都可以访问 model
 // void main() => runApp(MyApp());
