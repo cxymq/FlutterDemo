@@ -44,7 +44,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    //获取CounterModel的一种方法，下面可以直接使用
-    final counterModel = ScopedModel.of<CounterModel>(context);
+   //如果不设置rebuildOnChange=true，直接使用，会出现点击之后无法刷新界面的情况
+    // final counterModel = ScopedModel.of<CounterModel>(context);
+    final counterModel = ScopedModel.of<CounterModel>(context, rebuildOnChange: true);
 
     return Scaffold(
       appBar: AppBar(
@@ -56,15 +58,19 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             Text('点击了多少次'),
             //获取CounterModel的另一种方法
-            ScopedModelDescendant<CounterModel> (
-              //当model更新时调用
-              builder: (context, child, model){
-                return Text(
-                  model.counter.toString(),
+            // ScopedModelDescendant<CounterModel> (
+            //   //当model更新时调用
+            //   builder: (context, child, model){
+            //     return Text(
+            //       model.counter.toString(),
+            //       style: Theme.of(context).textTheme.display1,
+            //     );
+            //   },
+            // ),
+            Text(
+                  counterModel.counter.toString(),
                   style: Theme.of(context).textTheme.display1,
-                );
-              },
-            ),
+                )
           ],
         ),
       ),

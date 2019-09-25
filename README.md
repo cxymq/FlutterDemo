@@ -2,6 +2,8 @@
 Flutter示例集合
 
 1.counter_scopedmodel ：状态管理之scoped_model
+		
+2.todo_fish_redux: 状态管理之fish_redux
 
 
 -----------------------------------------------------------
