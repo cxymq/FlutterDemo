@@ -5,6 +5,12 @@ Flutter示例集合
 		
 2.todo_fish_redux: 状态管理之fish_redux
 
+3.counter_bloc:状态管理之bloc
+		
+4.todo_bloc:状态管理之bloc
+
+5.git_search_rxdart:状态管理之rxdart
+
 
 -----------------------------------------------------------
 
