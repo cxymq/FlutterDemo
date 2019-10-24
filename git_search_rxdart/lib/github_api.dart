@@ -23,13 +23,18 @@ class SearchResultItem {
   }
 }
 
-//搜索结果
+//搜索结果集
 class SearchResult {
   final List<SearchResultItem> items;
 
   SearchResult(this.items);
 
   factory SearchResult.fromJson(dynamic json) {
+    final itemsT = (json as List);
+    print('items: $itemsT');
+    final itemsTC = itemsT.cast<Map<String, Object>>();
+    print('items > cast : $itemsTC');
+    
     final items = (json as List)
     .cast<Map<String, Object>>()
     .map((Map<String, Object> item) {
@@ -49,6 +54,7 @@ class SearchResult {
 class GithubAPI {
   final String baseUrl;
 
+  //搜索缓存字典
   final Map<String, SearchResult> cache;
 
   final http.Client client;
@@ -60,6 +66,7 @@ class GithubAPI {
     }): this.client = client ?? http.Client(),
         this.cache = cache ?? <String, SearchResult>{};
 
+//搜索函数，搜索开始，首先从缓存字典中查找，没有则进行数据请求并存储在缓存中
   Future<SearchResult> search(String term) async {
     if(cache.containsKey(term)) {
       return cache[term];
@@ -70,6 +77,7 @@ class GithubAPI {
     }
   }
 
+//数据请求
 Future<SearchResult> _fetchResult(String term) async {
   final response = await client.get(Uri.parse('$baseUrl$term'));
   final result = json.decode(response.body);

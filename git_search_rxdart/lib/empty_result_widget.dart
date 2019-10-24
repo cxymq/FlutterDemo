@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+///数据为空时显示的组件
 class EmptyWidget extends StatelessWidget {
   const EmptyWidget({Key key}): super(key: key);
   

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:git_search_rxdart/github_api.dart';
-
+///搜索结果后显示的组件
 class SearchResultWidget extends StatelessWidget {
   final List<SearchResultItem> items;
 

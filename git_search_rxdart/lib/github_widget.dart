@@ -26,12 +26,13 @@ class SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     super.initState();
-
+//初始化bloc
     bloc = SearchBloc(widget.api);
   }
 
   @override
   void dispose() {
+    //回收bloc
     bloc.dispose();
     super.dispose();
 
@@ -61,7 +62,7 @@ class SearchScreenState extends State<SearchScreen> {
                       fontFamily: 'Hind',
                       decoration: TextDecoration.none
                     ),
-                    onChanged: bloc.onTextChanged.add,
+                    onChanged: bloc.textChanged,//bloc.onTextChanged.add,
                   ),
                 ),
                 Expanded(

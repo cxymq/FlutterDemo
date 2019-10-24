@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///输入关键词时显示的组件
 class SearchIntro extends StatelessWidget {
   const SearchIntro({Key key}) : super(key: key);
 

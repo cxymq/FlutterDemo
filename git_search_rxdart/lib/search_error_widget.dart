@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+///搜索失败时显示的组件
 class SearchErrorWidget extends StatelessWidget {
   const SearchErrorWidget({Key key}) : super(key: key);
 

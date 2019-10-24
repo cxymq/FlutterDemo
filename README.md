@@ -1,15 +1,15 @@
 # FlutterDemo
 Flutter示例集合
 
-1.counter_scopedmodel ：状态管理之scoped_model
+1.counter_scopedmodel ：[状态管理之scoped_model](https://blog.csdn.net/Crazy_SunShine/article/details/100847849)
 		
-2.todo_fish_redux: 状态管理之fish_redux
+2.todo_fish_redux: [状态管理之fish_redux](https://blog.csdn.net/Crazy_SunShine/article/details/101430068)
 
-3.counter_bloc:状态管理之bloc
+3.counter_bloc:[状态管理之bloc](https://blog.csdn.net/Crazy_SunShine/article/details/102587353)
 		
 4.todo_bloc:状态管理之bloc
 
-5.git_search_rxdart:状态管理之rxdart
+5.git_search_rxdart:[状态管理之rxdart](https://blog.csdn.net/Crazy_SunShine/article/details/102721334)
 
 
 -----------------------------------------------------------
